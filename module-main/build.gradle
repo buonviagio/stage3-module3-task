@@ -1,0 +1,25 @@
+plugins {
+    //id 'java'
+    id 'application'
+}
+
+//group = 'com.mjc.school'
+mainClassName = 'com.mjc.school.Main'
+version = 'unspecified'
+
+/*repositories {
+    mavenCentral()
+}*/
+
+dependencies {
+    implementation project(':module-web')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+run {
+    standardInput = System.in
+}
+test {
+    useJUnitPlatform()
+}
