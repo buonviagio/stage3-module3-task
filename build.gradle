@@ -21,21 +21,32 @@ subprojects {
     dependencies {
         implementation "org.springframework:spring-context:$springVersion"
 
+        // Testing
         testImplementation "org.springframework:spring-test:$springVersion"
         testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
         testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
         testImplementation "com.tngtech.archunit:archunit:$archUnitVersion"
 
+        // MapStruct
         annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
         implementation "org.mapstruct:mapstruct:$mapstructVersion"
 
+        // Lombok
         compileOnly 'org.projectlombok:lombok:1.18.28'
         annotationProcessor 'org.projectlombok:lombok:1.18.28'
 
         // https://mvnrepository.com/artifact/org.springframework/spring-aspects
         implementation 'org.springframework:spring-aspects:6.0.12'
 
+        // SLF4J API
+        implementation 'org.slf4j:slf4j-api:2.0.9'
 
+        // Logback (SLF4J implementation)
+        implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+        // Mockito
+        testImplementation "org.mockito:mockito-core:3.+"
+        testImplementation 'org.mockito:mockito-junit-jupiter:5.7.0'
     }
     test {
         useJUnitPlatform()

@@ -1,0 +1,4 @@
+2025-03-27 10:35:03 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-03-27 10:35:03 [INFO] com.mjc.school.SpringConfiguration - Initializing SpringConfiguration...
+2025-03-27 10:35:03 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 2 controllers: ArrayList
+2025-03-27 10:35:29 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '0'

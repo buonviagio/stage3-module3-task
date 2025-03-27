@@ -1,0 +1,9 @@
+2025-03-26 22:02:51 [WARN] com.mjc.school.operation.Operations - Command not found for number: 99
+2025-03-26 22:05:13 [WARN] com.mjc.school.operation.Operations - Command not found for number: 99
+2025-03-26 22:07:07 [WARN] com.mjc.school.operation.Operations - Command not found for number: 99
+2025-03-26 22:49:36 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
+2025-03-26 22:49:36 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
+2025-03-26 22:49:36 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 5 - Create news
+2025-03-26 22:49:36 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
+2025-03-26 22:53:45 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
+2025-03-26 22:54:15 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
