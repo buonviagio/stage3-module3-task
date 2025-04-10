@@ -55,11 +55,11 @@ class OperationEngineTest {
         when(mockCommand.execute()).thenReturn(123L);
     }
 
-    @Test
+/*    @Test
     void execute_findsHandlerMethod() throws Exception {
         // Setup test method with annotation
-       /* Method method = TestController.class.getMethod("handleCreate", Long.class);
-        TestController controller = new TestController();*/
+       *//* Method method = TestController.class.getMethod("handleCreate", Long.class);
+        TestController controller = new TestController();*//*
 
         // Test
         //operationEngine.execute(Operations.CREATE_NEWS, mockCommand);
@@ -71,7 +71,7 @@ class OperationEngineTest {
 
         // Verify via logs or side effects
         assertTrue(true); // Actual verification would check method invocation
-    }
+    }*/
 
     @Test
     void prepareArguments_handlesCommandBody() throws Exception {

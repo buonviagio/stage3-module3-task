@@ -15,6 +15,10 @@ dependencies {
     implementation project(':module-web')
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Add web starter
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Ensure JPA starter is present
+    implementation "com.h2database:h2"
 }
 
 run {

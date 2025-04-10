@@ -59,7 +59,7 @@ public class OperationEngine {
             Operations operation = Operations.getCommand(str);
             log.debug("Resolved operation: {}", operation);
 
-            Command command = operationReader.readCommandParameters(operation, scanner);
+            Command<?> command = operationReader.readCommandParameters(operation, scanner);
             log.trace("Prepared command: {}", command);
 
             execute(operation, command);
@@ -73,23 +73,43 @@ public class OperationEngine {
      * Finds and invokes the appropriate handler method
      * @throws CommandNotFoundException if no suitable handler found
      */
-    private void execute(Operations operation, Command command) throws CommandNotFoundException {
+    private void execute(Operations operation, Command<?> command) throws CommandNotFoundException {
         boolean methodFound = false;
         for (BaseController<?, ?, ?> controller : controllers) {
+
 
             Optional<Method> optionalMethod = Arrays.stream(controller.getClass().getDeclaredMethods())
                     .filter(x -> x.isAnnotationPresent(CommandHandler.class))
                     .filter(x -> x.getAnnotation(CommandHandler.class).operation().equals(operation.getCommand()))
                     .findFirst();
 
+
+            /*Optional<Method> optionalMethod = Arrays.stream(controller.getClass().getDeclaredMethods())
+                    .filter(method -> {
+                        boolean isCommandHandler = method.isAnnotationPresent(CommandHandler.class);
+                        if (isCommandHandler) {
+                            CommandHandler commandHandler = method.getAnnotation(CommandHandler.class);
+                            boolean operationMatches = commandHandler.operation().equals(operation.getCommand());
+                            if (operationMatches) {
+                                System.out.println("Found matching @CommandHandler annotation on method: " + method.getName());
+                                return true;
+                            } else {
+                                System.out.println("@CommandHandler annotation found on method: " + method.getName() + ", but operation '" + commandHandler.operation() + "' does not match '" + operation.getCommand() + "'.");
+                            }
+                        }
+                        return false;
+                    })
+                    .findFirst();*/
+
             if (optionalMethod.isPresent()) {
                 Method method = optionalMethod.get();
-
+                System.out.println("method is present!!!");
                 try {
                     Object[] args = prepareArguments(method, command);
                     log.debug("Invoking {} with {} arguments", method.getName(), args.length);
                     // at this point we receive return from methods from classes AuthorController and NewsController
                     method.invoke(controller, args);
+                    System.out.println("METHOD WAS INVOKED");
                     methodFound = true;
                     break;
                 } catch (IllegalAccessException | InvocationTargetException e) {
@@ -99,11 +119,11 @@ public class OperationEngine {
         }
         if (!methodFound) {
             log.error("No handler found for operation: {}", operation);
-            throw new CommandNotFoundException("Command not found, we do not perform such operation");
+            throw new CommandNotFoundException("Command not found, we do not perform such operation Operation class");
         }
     }
 
-    private Object[] prepareArguments(Method method, Command command) {
+    private Object[] prepareArguments(Method method, Command<?> command) {
         Parameter[] parameters = method.getParameters();
         Object[] args = new Object[parameters.length];
 
@@ -112,6 +132,7 @@ public class OperationEngine {
                 args[i] = command.execute();
                 log.trace("Prepared @CommandBody argument: {}", args[i]);
             } else if (parameters[i].isAnnotationPresent(CommandParam.class)) {
+                System.out.println("Command Param Type -> " + parameters[i].getType());
                 args[i] = extractCommandParam(command, parameters[i].getType());
                 log.trace("Prepared @CommandParam argument: {}", args[i]);
             }
@@ -119,12 +140,14 @@ public class OperationEngine {
         return args;
     }
 
-    private Object extractCommandParam(Command command, Class<?> paramType) {
+    private Object extractCommandParam(Command<?> command, Class<?> paramType) {
         if (paramType.equals(Long.class)) {
+
             return command.execute();
         }
         log.warn("Unsupported parameter type: {}", paramType);
-        return null;
+        //TEMPORARY LATER HAVE TO CHANGE TO NULL
+        return command.execute();
     }
 }
 

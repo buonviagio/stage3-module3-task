@@ -1,6 +1,0 @@
-2025-03-27 10:41:14 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
-2025-03-27 10:41:14 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
-2025-03-27 10:41:14 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 5 - Create news
-2025-03-27 10:41:14 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
-2025-03-27 10:53:05 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 1 controllers: SingletonList
-2025-03-27 10:53:05 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 5 - Create news

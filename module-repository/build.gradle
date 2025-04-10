@@ -1,0 +1,6 @@
+/*
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Add web starter
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa" // To get JPA, Hibernate, etc.
+    implementation "com.h2database:h2" // For H2
+}*/

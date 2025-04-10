@@ -1,5 +1,8 @@
 plugins {
     id 'java-base'
+    // to transform in spring boot
+    id 'org.springframework.boot' version '2.7.7'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 wrapper {
@@ -11,6 +14,10 @@ subprojects {
     apply plugin: 'jacoco'
     group = 'com.mjc.school'
 
+    // In order to apply Spring Boot plugin in subprojects
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion
 
@@ -18,31 +25,44 @@ subprojects {
         mavenCentral()
     }
 
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+
     dependencies {
-        implementation "org.springframework:spring-context:$springVersion"
+        /*implementation "org.springframework:spring-context:$springVersion"*/
 
         // Testing
-        testImplementation "org.springframework:spring-test:$springVersion"
+       /* testImplementation "org.springframework:spring-test:$springVersion"
         testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
         testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
-        testImplementation "com.tngtech.archunit:archunit:$archUnitVersion"
+        testImplementation "com.tngtech.archunit:archunit:$archUnitVersion"*/
+
+        implementation 'org.springframework.boot:spring-boot-starter-web' // Add web starter
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa" // To get JPA, Hibernate, etc.
+        implementation "com.h2database:h2" // For H2
+
+        // Validation (using Jakarta Bean Validation, which is standard with Spring Boot 2.x)
+        implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+        testImplementation "org.junit.jupiter:junit-jupiter-api"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+        testImplementation "com.tngtech.archunit:archunit-junit5:$archUnitVersion"
+        testImplementation "org.springframework.boot:spring-boot-starter-test" // Includes Spring Test
 
         // MapStruct
         annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
         implementation "org.mapstruct:mapstruct:$mapstructVersion"
 
         // Lombok
-        compileOnly 'org.projectlombok:lombok:1.18.28'
-        annotationProcessor 'org.projectlombok:lombok:1.18.28'
+        compileOnly "org.projectlombok:lombok:$lombokVersion"
+        annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
         // https://mvnrepository.com/artifact/org.springframework/spring-aspects
-        implementation 'org.springframework:spring-aspects:6.0.12'
-
-        // SLF4J API
-        implementation 'org.slf4j:slf4j-api:2.0.9'
-
-        // Logback (SLF4J implementation)
-        implementation 'ch.qos.logback:logback-classic:1.4.14'
+        // Aspects
+        implementation "org.springframework:spring-aspects:$aspectsVersion"
 
         // Mockito
         testImplementation "org.mockito:mockito-core:3.+"

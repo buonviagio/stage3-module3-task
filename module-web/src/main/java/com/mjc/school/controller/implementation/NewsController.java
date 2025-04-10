@@ -3,71 +3,112 @@ package com.mjc.school.controller.implementation;
 import com.mjc.school.controller.annotations.CommandBody;
 import com.mjc.school.controller.annotations.CommandHandler;
 import com.mjc.school.controller.annotations.CommandParam;
+import com.mjc.school.service.dto.NewsDtoRequest;
+import com.mjc.school.service.dto.NewsDtoResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.mjc.school.controller.BaseController;
-import java.util.ArrayList;
+import com.mjc.school.service.BaseService;
 import java.util.List;
 
+/**
+ * Controller for handling news-related operations.
+ *
+ * <p>Implements the command pattern through {@link CommandHandler} annotations
+ * to route requests to appropriate service methods. Acts as the entry point
+ * for news operations in the application.
+ */
+@Slf4j
 @Component
-//public class NewsController implements BaseController<NewsDtoRequest, NewsDtoResponse, Long> {
-public class NewsController implements BaseController<String, Object, Long> {
+public class NewsController implements BaseController<NewsDtoRequest, NewsDtoResponse, Long> {
 
-    /*private final BaseService<NewsDtoRequest, NewsDtoResponse, Long> newsService;
+    private final BaseService<NewsDtoRequest, NewsDtoResponse, Long> newsService;
+
+    /**
+     * Constructs the controller with required service dependency.
+     * @param newsService Service layer for news operations
+     */
     @Autowired
     public NewsController(BaseService<NewsDtoRequest, NewsDtoResponse, Long> newsService) {
         this.newsService = newsService;
-        System.out.println("NewsController создан");
-    }*/
+        log.info("NewsController initialized with service: {}",
+                newsService.getClass().getSimpleName());
+    }
 
+    /**
+     * Retrieves all news articles.
+     * @return List of all news DTOs
+     */
     @CommandHandler(operation = "Get all news")
     @Override
-    public List<Object> readAll() {
-        System.out.println("readAll() from NewsController \n");
-        return new ArrayList<>();
-        /*List<NewsDtoResponse> response = newsService.readAll();
-        System.out.println(printNews(newsService.readAll().toArray(new NewsDtoResponse[0])));
-        return response;*/
+    public List<NewsDtoResponse> readAll() {
+        log.info("Controller news component -> Fetching all news articles");
+        System.out.println("METHOD READ ALL FROM NEWS CONTROLLER");
+        List<NewsDtoResponse> response = newsService.readAll();
+        System.out.println("RESPONSE -> " + response);
+        //System.out.println(printNews(newsService.readAll().toArray(new NewsDtoResponse[0])));
+        System.out.println("RESPONCE READ ALL NEWS CONTROLLER ->" + response);
+        System.out.println(printNews(response.toArray(new NewsDtoResponse[0])));
+        return response;
     }
 
+    /**
+     * Retrieves a specific news article by ID.
+     * @param id News article identifier
+     * @return News DTO response
+     */
     @CommandHandler(operation = "Get news by id")
     @Override
-    public Object readById(@CommandParam("id") Long id) {
-        System.out.println("readById() from NewsController \n");
-        return new Object();
-        /*NewsDtoResponse response = newsService.readById(id);
+    public NewsDtoResponse readById(@CommandParam("id") Long id) {
+        log.info("Controller news component -> Fetching news article with ID: {}", id);
+        System.out.println("WEB LEVEL ID " + id);
+        NewsDtoResponse response = newsService.readById(id);
         System.out.println(printNews(response));
-        return response;*/
+        return response;
     }
 
+    /**
+     * Creates a new news article.
+     * @param createRequest News creation DTO
+     * @return Created news DTO
+     */
     @CommandHandler(operation = "Create news")
     @Override
-    public Object create(@CommandBody String createRequest) {
-        System.out.println("create() from NewsController \n");
-        return new Object();
-       /* NewsDtoResponse response = newsService.create(createRequest);
+    public NewsDtoResponse create(@CommandBody NewsDtoRequest createRequest) {
+        log.info("Creating new news article with title: {}", createRequest.getName());
+        NewsDtoResponse response = newsService.create(createRequest);
         System.out.println(printNews(response));
-        return response;*/
+        return response;
     }
 
+    /**
+     * Updates an existing news article.
+     * @param updateRequest News update DTO
+     * @return Updated news DTO
+     */
     @CommandHandler(operation = "Update news")
     @Override
-    public Object update(@CommandBody String updateRequest) {
-        System.out.println("update() from NewsController \n");
-        return new Object();
-        /*NewsDtoResponse response = newsService.update(updateRequest);
+    public NewsDtoResponse update(@CommandBody NewsDtoRequest updateRequest) {
+        log.info("Updating news article with ID: {}", updateRequest.getId());
+        NewsDtoResponse response = newsService.update(updateRequest);
         System.out.println(printNews(response));
-        return response;*/
+        return response;
     }
 
+    /**
+     * Deletes a news article by ID.
+     * @param id News article identifier
+     * @return true if deletion was successful
+     */
     @CommandHandler(operation = "Remove news by id")
     @Override
     public boolean deleteById(@CommandParam("id") Long id) {
-        System.out.println("deleteById() from NewsController \n");
-        return true;
-        //return newsService.deleteById(id);
+        log.info("Attempting to delete news with ID: {}", id);
+        return newsService.deleteById(id);
     }
 
-    /*private String printNews(NewsDtoResponse... response) {
+    private String printNews(NewsDtoResponse... response) {
         StringBuilder builder = new StringBuilder();
         for (NewsDtoResponse n : response) {
             builder.append("NewsDtoResponse [id=").append(n.getId())
@@ -79,5 +120,5 @@ public class NewsController implements BaseController<String, Object, Long> {
                     .append("\n");
         }
         return builder.toString();
-    }*/
+    }
 }
