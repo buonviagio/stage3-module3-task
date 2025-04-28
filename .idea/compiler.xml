@@ -6,7 +6,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.4.2.Final/e55bd90d51cddd638c07d5bd89fc7535d4e3d069/mapstruct-processor-1.4.2.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
         </processorPath>
         <module name="stage3-module3-task.module-main.main" />
         <module name="stage3-module3-task.module-repository.main" />
@@ -15,5 +15,21 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="stage3-module3-task.module-main" options="-parameters" />
+      <module name="stage3-module3-task.module-main.main" options="-parameters" />
+      <module name="stage3-module3-task.module-main.test" options="-parameters" />
+      <module name="stage3-module3-task.module-repository" options="-parameters" />
+      <module name="stage3-module3-task.module-repository.main" options="-parameters" />
+      <module name="stage3-module3-task.module-repository.test" options="-parameters" />
+      <module name="stage3-module3-task.module-service" options="-parameters" />
+      <module name="stage3-module3-task.module-service.main" options="-parameters" />
+      <module name="stage3-module3-task.module-service.test" options="-parameters" />
+      <module name="stage3-module3-task.module-web" options="-parameters" />
+      <module name="stage3-module3-task.module-web.main" options="-parameters" />
+      <module name="stage3-module3-task.module-web.test" options="-parameters" />
+    </option>
   </component>
 </project>

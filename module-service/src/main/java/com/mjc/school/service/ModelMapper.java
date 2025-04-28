@@ -2,10 +2,8 @@ package com.mjc.school.service;
 
 import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.repository.model.NewsModel;
-import com.mjc.school.service.dto.AuthorDtoRequest;
-import com.mjc.school.service.dto.AuthorDtoResponse;
-import com.mjc.school.service.dto.NewsDtoRequest;
-import com.mjc.school.service.dto.NewsDtoResponse;
+import com.mjc.school.repository.model.TagModel;
+import com.mjc.school.service.dto.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
@@ -118,5 +116,9 @@ public interface ModelMapper {
             @Mapping(target = "lastUpdateDate", ignore = true)
     })
     AuthorModel dtoToModelAuthor(AuthorDtoRequest dtoRequest);
+
+
+    @Mapping(source = "name", target = "name")
+    List<TagDtoResponse> modelListToDtoListTags(List<TagModel> tagsModelList);
 }
 

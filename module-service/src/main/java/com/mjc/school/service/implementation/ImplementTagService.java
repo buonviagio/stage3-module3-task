@@ -1,6 +1,7 @@
 package com.mjc.school.service.implementation;
 
 import com.mjc.school.repository.BaseRepository;
+import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.repository.model.TagModel;
 import com.mjc.school.service.BaseService;
@@ -13,21 +14,33 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Slf4j
+
 @Service
 public class ImplementTagService implements BaseService<TagDtoRequest, TagDtoResponse, Long> {
 
     private final BaseRepository<TagModel, Long> tagRepository;
-    ModelMapper mapper = ModelMapper.INSTANCE;
-
+    //ModelMapper mapper = ModelMapper.INSTANCE;
+    private final ModelMapper mapper;
+    /**
+     * Constructs the service with required dependencies.
+     * @param repository News repository for persistence operations
+     */
     @Autowired
-    public ImplementTagService(BaseRepository<TagModel, Long> repository) {
+    public ImplementTagService(BaseRepository<TagModel, Long> repository, ModelMapper mapper) {
         this.tagRepository = repository;
+        this.mapper = mapper;
     }
+
 
     @Override
     public List<TagDtoResponse> readAll() {
-        return List.of();
+        //log.info("Service Tag Component -> Fetching all tags articles");
+        System.out.println("Method readALL from class Implementation Tags Service");
+        List<TagModel> tagsList = tagRepository.readAll();
+
+        //log.debug("Service Tags Component -> Retrieved {} tags  from repository", tagsList.size());
+
+        return mapper.modelListToDtoListTags(tagsList);
     }
 
     @Override

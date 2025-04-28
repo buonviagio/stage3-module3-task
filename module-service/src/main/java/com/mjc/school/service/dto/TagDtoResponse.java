@@ -10,4 +10,8 @@ public class TagDtoResponse implements DtoResponse{
     private String name;
     private LocalDateTime createDate;
     private LocalDateTime lastUpdateDate;
+
+    public String getName() {
+        return name;
+    }
 }

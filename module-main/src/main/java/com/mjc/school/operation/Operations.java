@@ -26,6 +26,14 @@ import lombok.extern.slf4j.Slf4j;
         UPDATE_AUTHORS("Update authors", "8"),
         REMOVE_NEWS_BY_ID("Remove news by id", "9"),
         REMOVE_AUTHOR_BY_ID("Remove author by id", "10"),
+        GET_ALL_TAGS("Get all tags", "11"),
+        GET_TAG_BY_ID("Get Tag by id", "12"),
+        CREATE_TAG("Create_Tag", "13"),
+        UPDATE_TAG("Update tag", "14"),
+        DELETE_TAG("Remove tag by id", "15"),
+        GET_AUTHOR_BY_NEWS_ID("Get author by news id", "16"),
+        GET_TAGS_BY_NEWS_ID("Get tags by news id", "17"),
+        GET_NEWS_BY_SOME_PARAMETERS("Get news by one parameter", "18"),
         EXIT("Exit", "0");
 
         private String command;

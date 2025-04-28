@@ -61,6 +61,9 @@ public class OperationReader {
             case UPDATE_AUTHORS -> {
                 return updateAuthor(scanner);
             }
+            case GET_ALL_TAGS -> {
+                return new GetAllTagsCommand();
+            }
             case EXIT -> System.exit(0);
             default -> throw new CommandNotFoundException("Command not found");
         }
