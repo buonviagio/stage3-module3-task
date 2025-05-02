@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mjc.school.service.implementation.ImplementNewsServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-02T20:32:02" hostname="Mac" time="0.071">
+  <properties/>
+  <testcase name="shouldUpdateNewsSuccessfully_whenNewsAndAuthorExist()" classname="com.mjc.school.service.implementation.ImplementNewsServiceTest" time="0.058"/>
+  <testcase name="shouldThrowNotFoundException_whenAuthorDoesNotExist()" classname="com.mjc.school.service.implementation.ImplementNewsServiceTest" time="0.009"/>
+  <testcase name="shouldCreateNewsSuccessfully_whenAuthorExists()" classname="com.mjc.school.service.implementation.ImplementNewsServiceTest" time="0.004"/>
+  <system-out><![CDATA[22:32:02.361 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
+22:32:02.405 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
+AUTHOR AuthorModel(id=1, name=Test Author, createDate=null, lastUpdateDate=null, news=[])
+22:32:02.415 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Creating new news article. Title: Test Title
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

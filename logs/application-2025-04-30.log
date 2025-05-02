@@ -1,0 +1,444 @@
+2025-04-30 10:23:28 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 10:23:28 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 10:23:28 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1242 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 10:23:28 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 10:23:28 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 10:23:28 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 10:23:28 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-04-30 10:23:28 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 10:23:28 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:23:28 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 10:23:28 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 10:23:28 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 10:23:28 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 442 ms
+2025-04-30 10:23:28 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 10:23:28 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 10:23:28 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 10:23:28 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 10:23:28 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 10:23:29 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 10:23:29 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 10:23:29 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 10:23:29 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:23:29 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$a5384300
+2025-04-30 10:23:29 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$74d8b6d7
+2025-04-30 10:23:29 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 10:23:29 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 10:23:29 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 10:23:29 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:23:29 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 10:23:29 [INFO] com.mjc.school.Main - Started Main in 1.184 seconds (JVM running for 1.342)
+2025-04-30 10:23:39 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '0'
+2025-04-30 10:23:39 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:23:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 10:23:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 10:42:54 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 10:42:55 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 10:42:55 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1597 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 10:42:55 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 10:42:55 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 10:42:55 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 10:42:55 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-04-30 10:42:55 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 10:42:55 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:42:55 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 10:42:55 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 10:42:55 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 10:42:55 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 377 ms
+2025-04-30 10:42:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 10:42:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 10:42:55 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 10:42:55 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 10:42:55 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 10:42:55 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 10:42:55 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 10:42:55 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 10:42:55 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:42:55 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$1efaf16c
+2025-04-30 10:42:55 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$b0aae3cc
+2025-04-30 10:42:55 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 10:42:55 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 10:42:55 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 10:42:56 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:42:56 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 10:42:56 [INFO] com.mjc.school.Main - Started Main in 1.031 seconds (JVM running for 1.176)
+2025-04-30 10:42:59 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '13'
+2025-04-30 10:42:59 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for CreateTagCommand
+2025-04-30 10:43:18 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 13 - Create Tag
+2025-04-30 10:43:18 [WARN] com.mjc.school.operation.OperationEngine - Invalid operation input: Command not found, we do not perform such operation Operation class
+2025-04-30 10:43:42 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '11'
+2025-04-30 10:43:42 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Fetching all tags
+2025-04-30 10:43:42 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Fetching all tags articles
+2025-04-30 10:43:42 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_,
+        tagmodel0_.create_date as create_d2_3_,
+        tagmodel0_.last_update_date as last_upd3_3_,
+        tagmodel0_.name as name4_3_ 
+    from
+        tag tagmodel0_
+2025-04-30 10:45:00 [ERROR] com.mjc.school.Main - Exception occurred while running StartApplication:
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at com.mjc.school.StartApplication.run(StartApplication.java:21)
+	at com.mjc.school.Main.run(Main.java:65)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.mjc.school.Main.main(Main.java:53)
+2025-04-30 10:45:00 [INFO] com.mjc.school.Main - The end of the method main in the Main class, application work finished successfully
+
+2025-04-30 10:45:00 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:45:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 10:45:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 10:45:01 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 10:45:01 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 10:45:01 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1629 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 10:45:01 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 10:45:01 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 10:45:01 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 10:45:01 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-04-30 10:45:01 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 10:45:01 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:45:01 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 10:45:01 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 10:45:01 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 10:45:01 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 405 ms
+2025-04-30 10:45:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 10:45:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 10:45:01 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 10:45:01 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 10:45:01 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 10:45:01 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 10:45:01 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 10:45:02 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 10:45:02 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:45:02 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$6f986220
+2025-04-30 10:45:02 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$4cde1ea3
+2025-04-30 10:45:02 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 10:45:02 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 10:45:02 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 10:45:02 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:45:02 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 10:45:02 [INFO] com.mjc.school.Main - Started Main in 1.098 seconds (JVM running for 1.243)
+2025-04-30 10:45:09 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '13'
+2025-04-30 10:45:09 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for CreateTagCommand
+2025-04-30 10:45:20 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 13 - Create Tag
+2025-04-30 10:45:20 [WARN] com.mjc.school.operation.OperationEngine - Invalid operation input: Command not found, we do not perform such operation Operation class
+2025-04-30 10:50:43 [ERROR] com.mjc.school.Main - Exception occurred while running StartApplication:
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at com.mjc.school.StartApplication.run(StartApplication.java:21)
+	at com.mjc.school.Main.run(Main.java:65)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.mjc.school.Main.main(Main.java:53)
+2025-04-30 10:50:43 [INFO] com.mjc.school.Main - The end of the method main in the Main class, application work finished successfully
+
+2025-04-30 10:50:43 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:50:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 10:50:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 10:50:44 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 10:50:44 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 10:50:44 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1692 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 10:50:44 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 10:50:44 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 10:50:44 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 10:50:44 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-04-30 10:50:44 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 10:50:44 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:50:44 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 10:50:44 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 10:50:44 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 10:50:44 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 396 ms
+2025-04-30 10:50:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 10:50:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 10:50:44 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 10:50:44 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 10:50:44 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 10:50:44 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 10:50:44 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 10:50:45 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 10:50:45 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:50:45 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$1efaf16c
+2025-04-30 10:50:45 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$b0aae3cc
+2025-04-30 10:50:45 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 10:50:45 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 10:50:45 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 10:50:45 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:50:45 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 10:50:45 [INFO] com.mjc.school.Main - Started Main in 1.066 seconds (JVM running for 1.209)
+2025-04-30 10:50:49 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '13'
+2025-04-30 10:50:49 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for CreateTagCommand
+2025-04-30 10:50:59 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Creating new tag with name: transformation
+2025-04-30 10:50:59 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Creating new tag with request: TagDtoRequest(id=0, name=transformation)
+2025-04-30 10:50:59 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 13 - Create Tag
+2025-04-30 10:50:59 [WARN] com.mjc.school.operation.OperationEngine - Invalid operation input: Command not found, we do not perform such operation Operation class
+2025-04-30 10:52:48 [ERROR] com.mjc.school.Main - Exception occurred while running StartApplication:
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at com.mjc.school.StartApplication.run(StartApplication.java:21)
+	at com.mjc.school.Main.run(Main.java:65)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.mjc.school.Main.main(Main.java:53)
+2025-04-30 10:52:48 [INFO] com.mjc.school.Main - The end of the method main in the Main class, application work finished successfully
+
+2025-04-30 10:52:48 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:52:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 10:52:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 10:52:48 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 10:52:49 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 10:52:49 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1728 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 10:52:49 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 10:52:49 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 10:52:49 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 10:52:49 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-04-30 10:52:49 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 10:52:49 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:52:49 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 10:52:49 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 10:52:49 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 10:52:49 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 382 ms
+2025-04-30 10:52:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 10:52:49 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 10:52:49 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 10:52:49 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 10:52:49 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 10:52:49 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 10:52:49 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 10:52:49 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 10:52:49 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 10:52:49 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$2e481940
+2025-04-30 10:52:49 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$2b65dbdd
+2025-04-30 10:52:49 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 10:52:49 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 10:52:49 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 10:52:50 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 10:52:50 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 10:52:50 [INFO] com.mjc.school.Main - Started Main in 1.054 seconds (JVM running for 1.19)
+2025-04-30 10:52:53 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '13'
+2025-04-30 10:52:53 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for CreateTagCommand
+2025-04-30 10:53:04 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Creating new tag with name: Transformation
+2025-04-30 10:53:04 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Creating new tag with request: TagDtoRequest(id=0, name=Transformation)
+2025-04-30 10:53:04 [ERROR] com.mjc.school.operation.OperationEngine - No handler found for operation: 13 - Create Tag
+2025-04-30 10:53:04 [WARN] com.mjc.school.operation.OperationEngine - Invalid operation input: Command not found, we do not perform such operation Operation class
+2025-04-30 11:04:29 [ERROR] com.mjc.school.Main - Exception occurred while running StartApplication:
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at com.mjc.school.StartApplication.run(StartApplication.java:21)
+	at com.mjc.school.Main.run(Main.java:65)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.mjc.school.Main.main(Main.java:53)
+2025-04-30 11:04:29 [INFO] com.mjc.school.Main - The end of the method main in the Main class, application work finished successfully
+
+2025-04-30 11:04:29 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 11:04:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 11:04:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 11:04:30 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 11:04:30 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 11:04:30 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 1879 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 11:04:30 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 11:04:30 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 11:04:30 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 11:04:30 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-04-30 11:04:30 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 11:04:30 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 11:04:30 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 11:04:30 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 11:04:30 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 11:04:30 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+2025-04-30 11:04:30 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 11:04:30 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 11:04:30 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 11:04:30 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 11:04:30 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 11:04:30 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 11:04:30 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 11:04:31 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 11:04:31 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 11:04:31 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$7d696044
+2025-04-30 11:04:31 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$bb54b9f1
+2025-04-30 11:04:31 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 11:04:31 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 11:04:31 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 11:04:31 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 11:04:31 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 11:04:31 [INFO] com.mjc.school.Main - Started Main in 1.042 seconds (JVM running for 1.182)
+2025-04-30 11:04:38 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '13'
+2025-04-30 11:04:38 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for CreateTagCommand
+2025-04-30 11:04:46 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Creating new tag with name: transformation
+2025-04-30 11:04:46 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Creating new tag with request: TagDtoRequest(id=0, name=transformation)
+2025-04-30 11:04:46 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_0_,
+        tagmodel0_.create_date as create_d2_3_0_,
+        tagmodel0_.last_update_date as last_upd3_3_0_,
+        tagmodel0_.name as name4_3_0_ 
+    from
+        tag tagmodel0_ 
+    where
+        tagmodel0_.id=?
+2025-04-30 11:04:46 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [0]
+2025-04-30 11:04:46 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        tag
+        (id, create_date, last_update_date, name) 
+    values
+        (default, ?, ?, ?)
+2025-04-30 11:04:46 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-04-30T11:04:46.224262]
+2025-04-30 11:04:46 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-04-30T11:04:46.224284]
+2025-04-30 11:04:46 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [transformation]
+2025-04-30 11:04:56 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '1'
+2025-04-30 11:04:56 [INFO] com.mjc.school.controller.implementation.NewsController - Controller news component -> Fetching all news articles
+2025-04-30 11:04:56 [INFO] com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Fetching all news articles
+2025-04-30 11:04:56 [DEBUG] org.hibernate.SQL - 
+    select
+        newsmodel0_.id as id1_1_,
+        newsmodel0_.author_id as author_i6_1_,
+        newsmodel0_.content as content2_1_,
+        newsmodel0_.create_date as create_d3_1_,
+        newsmodel0_.last_update_date as last_upd4_1_,
+        newsmodel0_.title as title5_1_ 
+    from
+        news newsmodel0_
+2025-04-30 11:05:02 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '11'
+2025-04-30 11:05:02 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Fetching all tags
+2025-04-30 11:05:02 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Fetching all tags articles
+2025-04-30 11:05:02 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_,
+        tagmodel0_.create_date as create_d2_3_,
+        tagmodel0_.last_update_date as last_upd3_3_,
+        tagmodel0_.name as name4_3_ 
+    from
+        tag tagmodel0_
+2025-04-30 11:31:02 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m1s835ms).
+2025-04-30 11:44:55 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m22s356ms).
+2025-04-30 12:44:37 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m12s675ms).
+2025-04-30 14:03:08 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m30s951ms).
+2025-04-30 15:17:34 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h14m26s58ms).
+2025-04-30 16:22:44 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m9s805ms).
+2025-04-30 17:49:49 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27m4s345ms).
+2025-04-30 18:02:23 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m34s837ms).
+2025-04-30 18:03:19 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '0'
+2025-04-30 18:03:19 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 18:03:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 18:03:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-30 19:12:19 [INFO] com.mjc.school.Main - [32mWe start method main() in Class Main[0m
+2025-04-30 19:12:19 [INFO] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-30 19:12:19 [INFO] com.mjc.school.Main - Starting Main using Java 17.0.14 on Mac with PID 3480 (/Users/macpro/Desktop/code/MJC_School/stage3-module3-task/module-main/build/classes/java/main started by macpro in /Users/macpro/Desktop/code/MJC_School/stage3-module3-task)
+2025-04-30 19:12:19 [DEBUG] com.mjc.school.Main - Running with Spring Boot v2.7.7, Spring v5.3.24
+2025-04-30 19:12:19 [INFO] com.mjc.school.Main - No active profile set, falling back to 1 default profile: "default"
+2025-04-30 19:12:20 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30 19:12:20 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-04-30 19:12:20 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 19:12:20 [INFO] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-30 19:12:20 [INFO] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 19:12:20 [INFO] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-04-30 19:12:20 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 19:12:20 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms
+2025-04-30 19:12:20 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-30 19:12:20 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-30 19:12:20 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-30 19:12:20 [INFO] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30 19:12:20 [INFO] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-04-30 19:12:20 [INFO] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-30 19:12:20 [INFO] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-04-30 19:12:20 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-30 19:12:20 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 19:12:20 [INFO] com.mjc.school.controller.implementation.NewsController - NewsController initialized with service: ImplementNewsService$$EnhancerBySpringCGLIB$$94642172
+2025-04-30 19:12:20 [INFO] com.mjc.school.controller.implementation.AuthorController - AuthorController initialized with service: ImplementAuthorService$$EnhancerBySpringCGLIB$$ecf1189c
+2025-04-30 19:12:20 [INFO] com.mjc.school.controller.implementation.TagController - AuthorController initialized with service: ImplementTagService
+2025-04-30 19:12:20 [INFO] com.mjc.school.operation.OperationEngine - Initialized with 3 controllers: ArrayList
+2025-04-30 19:12:20 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30 19:12:20 [INFO] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-30 19:12:20 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 19:12:20 [INFO] com.mjc.school.Main - Started Main in 1.085 seconds (JVM running for 1.233)
+2025-04-30 19:12:27 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '11'
+2025-04-30 19:12:27 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Fetching all tags
+2025-04-30 19:12:27 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Fetching all tags articles
+2025-04-30 19:12:27 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_,
+        tagmodel0_.create_date as create_d2_3_,
+        tagmodel0_.last_update_date as last_upd3_3_,
+        tagmodel0_.name as name4_3_ 
+    from
+        tag tagmodel0_
+2025-04-30 19:12:34 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '14'
+2025-04-30 19:12:34 [INFO] com.mjc.school.operation.OperationReader - Reading parameters for UpdateTagCommand
+2025-04-30 19:12:45 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Updating tag with ID: 2
+2025-04-30 19:12:45 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Updating tag with ID: 2
+2025-04-30 19:12:45 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_0_,
+        tagmodel0_.create_date as create_d2_3_0_,
+        tagmodel0_.last_update_date as last_upd3_3_0_,
+        tagmodel0_.name as name4_3_0_ 
+    from
+        tag tagmodel0_ 
+    where
+        tagmodel0_.id=?
+2025-04-30 19:12:45 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2025-04-30 19:12:45 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_0_,
+        tagmodel0_.create_date as create_d2_3_0_,
+        tagmodel0_.last_update_date as last_upd3_3_0_,
+        tagmodel0_.name as name4_3_0_ 
+    from
+        tag tagmodel0_ 
+    where
+        tagmodel0_.id=?
+2025-04-30 19:12:45 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2025-04-30 19:12:45 [DEBUG] org.hibernate.SQL - 
+    update
+        tag 
+    set
+        last_update_date=?,
+        name=? 
+    where
+        id=?
+2025-04-30 19:12:45 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-04-30T19:12:45.722076]
+2025-04-30 19:12:45 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [newArt]
+2025-04-30 19:12:45 [TRACE] org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2025-04-30 19:12:52 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '11'
+2025-04-30 19:12:52 [INFO] com.mjc.school.controller.implementation.TagController - Controller tag component -> Fetching all tags
+2025-04-30 19:12:52 [INFO] com.mjc.school.service.implementation.ImplementTagService - Service Tag Component -> Fetching all tags articles
+2025-04-30 19:12:52 [DEBUG] org.hibernate.SQL - 
+    select
+        tagmodel0_.id as id1_3_,
+        tagmodel0_.create_date as create_d2_3_,
+        tagmodel0_.last_update_date as last_upd3_3_,
+        tagmodel0_.name as name4_3_ 
+    from
+        tag tagmodel0_
+2025-04-30 19:39:36 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s994ms).
+2025-04-30 19:56:04 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m57s922ms).
+2025-04-30 20:12:36 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m31s934ms).
+2025-04-30 20:15:28 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m22s173ms).
+2025-04-30 20:32:18 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m49s611ms).
+2025-04-30 20:48:53 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m4s903ms).
+2025-04-30 21:06:20 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m56s977ms).
+2025-04-30 21:22:39 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m19s248ms).
+2025-04-30 21:39:48 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m38s915ms).
+2025-04-30 21:58:19 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s338ms).
+2025-04-30 22:14:43 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m53s723ms).
+2025-04-30 22:16:39 [INFO] com.mjc.school.operation.OperationEngine - Processing operation input: '0'
+2025-04-30 22:16:39 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 22:16:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-30 22:16:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

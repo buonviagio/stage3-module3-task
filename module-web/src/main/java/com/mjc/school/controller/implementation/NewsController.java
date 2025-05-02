@@ -5,12 +5,14 @@ import com.mjc.school.controller.annotations.CommandHandler;
 import com.mjc.school.controller.annotations.CommandParam;
 import com.mjc.school.service.dto.NewsDtoRequest;
 import com.mjc.school.service.dto.NewsDtoResponse;
+import com.mjc.school.service.implementation.ImplementNewsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.mjc.school.controller.BaseController;
 import com.mjc.school.service.BaseService;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Controller for handling news-related operations.
@@ -44,11 +46,7 @@ public class NewsController implements BaseController<NewsDtoRequest, NewsDtoRes
     @Override
     public List<NewsDtoResponse> readAll() {
         log.info("Controller news component -> Fetching all news articles");
-        System.out.println("METHOD READ ALL FROM NEWS CONTROLLER");
         List<NewsDtoResponse> response = newsService.readAll();
-        System.out.println("RESPONSE -> " + response);
-        //System.out.println(printNews(newsService.readAll().toArray(new NewsDtoResponse[0])));
-        System.out.println("RESPONCE READ ALL NEWS CONTROLLER ->" + response);
         System.out.println(printNews(response.toArray(new NewsDtoResponse[0])));
         return response;
     }
@@ -106,6 +104,14 @@ public class NewsController implements BaseController<NewsDtoRequest, NewsDtoRes
     public boolean deleteById(@CommandParam("id") Long id) {
         log.info("Attempting to delete news with ID: {}", id);
         return newsService.deleteById(id);
+    }
+
+    @CommandHandler(operation = "Get news by one parameter")
+    public List<NewsDtoResponse> readNewsByParameters (@CommandBody Map map){
+        log.info("Controller news component -> Fetching news by parameters");
+        List<NewsDtoResponse> response = ((ImplementNewsService)newsService).readNewsByParameters(map);
+        System.out.println(printNews(response.toArray(new NewsDtoResponse[0])));
+        return response;
     }
 
     private String printNews(NewsDtoResponse... response) {

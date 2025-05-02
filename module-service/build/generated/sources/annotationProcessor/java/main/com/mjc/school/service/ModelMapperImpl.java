@@ -7,6 +7,7 @@ import com.mjc.school.service.dto.AuthorDtoRequest;
 import com.mjc.school.service.dto.AuthorDtoResponse;
 import com.mjc.school.service.dto.NewsDtoRequest;
 import com.mjc.school.service.dto.NewsDtoResponse;
+import com.mjc.school.service.dto.TagDtoRequest;
 import com.mjc.school.service.dto.TagDtoResponse;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-04-28T19:43:44+0200",
+    date = "2025-05-02T11:03:57+0200",
     comments = "version: 1.4.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.4.2.jar, environment: Java 17.0.14 (Amazon.com Inc.)"
 )
 @Component
@@ -149,10 +150,40 @@ public class ModelMapperImpl implements ModelMapper {
 
         List<TagDtoResponse> list = new ArrayList<TagDtoResponse>( tagsModelList.size() );
         for ( TagModel tagModel : tagsModelList ) {
-            list.add( tagModelToTagDtoResponse( tagModel ) );
+            list.add( modelToDtoTag( tagModel ) );
         }
 
         return list;
+    }
+
+    @Override
+    public TagDtoResponse modelToDtoTag(TagModel baseEntity) {
+        if ( baseEntity == null ) {
+            return null;
+        }
+
+        TagDtoResponse tagDtoResponse = new TagDtoResponse();
+
+        tagDtoResponse.setId( baseEntity.getId() );
+        tagDtoResponse.setName( baseEntity.getName() );
+        tagDtoResponse.setCreateDate( baseEntity.getCreateDate() );
+        tagDtoResponse.setLastUpdateDate( baseEntity.getLastUpdateDate() );
+
+        return tagDtoResponse;
+    }
+
+    @Override
+    public TagModel dtoToModelTag(TagDtoRequest dtoRequest) {
+        if ( dtoRequest == null ) {
+            return null;
+        }
+
+        TagModel tagModel = new TagModel();
+
+        tagModel.setId( dtoRequest.getId() );
+        tagModel.setName( dtoRequest.getName() );
+
+        return tagModel;
     }
 
     private Long baseEntityAuthorId(NewsModel newsModel) {
@@ -168,20 +199,5 @@ public class ModelMapperImpl implements ModelMapper {
             return null;
         }
         return id;
-    }
-
-    protected TagDtoResponse tagModelToTagDtoResponse(TagModel tagModel) {
-        if ( tagModel == null ) {
-            return null;
-        }
-
-        TagDtoResponse tagDtoResponse = new TagDtoResponse();
-
-        tagDtoResponse.setId( tagModel.getId() );
-        tagDtoResponse.setName( tagModel.getName() );
-        tagDtoResponse.setCreateDate( tagModel.getCreateDate() );
-        tagDtoResponse.setLastUpdateDate( tagModel.getLastUpdateDate() );
-
-        return tagDtoResponse;
     }
 }

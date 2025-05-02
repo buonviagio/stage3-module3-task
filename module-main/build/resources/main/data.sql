@@ -65,4 +65,9 @@ INSERT INTO news (title, content, create_date, last_update_date, author_id) VALU
 
 INSERT INTO news_tag (news_id, tag_id) VALUES
 (1, 1),
-(2, 2);
+(1, 4),
+(1, 3),
+(2, 1),
+(2, 2),
+(3, 3),
+(3, 4);

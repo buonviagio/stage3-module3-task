@@ -80,44 +80,57 @@ public class NewsRepository implements BaseRepository<NewsModel, Long> {
     }
 
     public List<NewsModel> findByCriteria(String tagName, Long tagId, String authorName, String title, String content) {
+        /* This is like Fabric, in order to create parts of query (conditions, functions)*/
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        // This is query -> SELECT * FROM NewsTable
         CriteriaQuery<NewsModel> cq = cb.createQuery(NewsModel.class);
+        // Root is equivalent SQL -> FROM news AS n. Here we can obtain access to fields of NewsModel n.get("title)...
+        // Throw Root I have access to fields (attributes) of entity NesModel
         Root<NewsModel> root = cq.from(NewsModel.class);
+
+        // We create a list of conditionals. In our case Predicate like WHERE
         List<Predicate> predicates = new ArrayList<>();
 
         if (tagName != null && !tagName.isEmpty()) {
+            System.out.println("Tag Name Section");
             Join<NewsModel, TagModel> tagJoin = root.join("tags");
             predicates.add(cb.equal(tagJoin.get("name"), tagName));
         }
 
         if (tagId != null) {
+            System.out.println("Tag ID Section");
             Join<NewsModel, TagModel> tagJoin = root.join("tags");
             predicates.add(cb.equal(tagJoin.get("id"), tagId));
         }
 
         if (authorName != null && !authorName.isEmpty()) {
+            System.out.println("authorName Section");
             Join<NewsModel, AuthorModel> authorJoin = root.join("author");
             predicates.add(cb.equal(authorJoin.get("name"), authorName));
         }
 
         if (title != null && !title.isEmpty()) {
+            System.out.println("Tittle Section");
             predicates.add(cb.like(root.get("title"), "%" + title + "%"));
         }
 
         if (content != null && !content.isEmpty()) {
-            predicates.add(cb.like(root.get("content"), "%" + content + "%"));
+            System.out.println("Content Section");
+            //predicates.add(cb.like(root.get("content"), "%" + content + "%"));
+            predicates.add(cb.like(cb.lower(root.get("content")), "%" + content.toLowerCase() + "%"));
         }
 
         cq.where(predicates.toArray(new Predicate[0]));
+        System.out.println("Repository method");
         return entityManager.createQuery(cq).getResultList();
     }
 
-    public List<NewsModel> findByTagId(Long tagId) {
+ /*   public List<NewsModel> findByTagId(Long tagId) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<NewsModel> cq = cb.createQuery(NewsModel.class);
         Root<NewsModel> root = cq.from(NewsModel.class);
         Join<NewsModel, TagModel> tagJoin = root.join("tags");
         cq.where(cb.equal(tagJoin.get("id"), tagId));
         return entityManager.createQuery(cq).getResultList();
-    }
+    }*/
 }

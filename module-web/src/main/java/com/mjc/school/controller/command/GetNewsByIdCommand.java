@@ -11,14 +11,12 @@ public class GetNewsByIdCommand extends Command<Long>{
     private final Long id;
 
     public GetNewsByIdCommand(Long id) {
-        System.out.println("CREATING CLASS" + id);
         this.id = id;
     }
 
     @Override
     public Long execute() {
         log.debug("method execute from GetNewsByIdCommand class");
-        System.out.println("METHOD EXECUTE ID" +  id);
         return id;
     }
 }

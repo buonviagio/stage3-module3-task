@@ -1,6 +1,7 @@
 package com.mjc.school.service.implementation;
 
 import com.mjc.school.repository.BaseRepository;
+import com.mjc.school.repository.implementation.AuthorRepository;
 import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.service.BaseService;
 import com.mjc.school.service.ModelMapper;
@@ -95,6 +96,17 @@ public class ImplementAuthorService implements BaseService<AuthorDtoRequest, Aut
             return true;
         } else {
             throw new NotFoundException(String.format(ErrorCodes.AUTH_ID_NOT_EXIST.toString(), id));
+        }
+    }
+
+    public AuthorDtoResponse readAuthorByNewsId(Long id) {
+        log.info("Service Author Component -> Fetching author by news ID: {}", id);
+        Optional<AuthorModel> optional = ((AuthorRepository) repository).findAuthorByNewsId(id);
+        if (optional.isPresent()) {
+            AuthorModel authorModel = optional.get();
+            return mapper.modelToDtoAuthor(authorModel);
+        } else {
+            throw new NotFoundException(String.format(ErrorCodes.NEW_ID_N_EXIST.toString(), id));
         }
     }
 

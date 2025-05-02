@@ -19,6 +19,7 @@ public enum ErrorCodes {
     // Author-related errors
     AUTH_ID_NOT_EXIST("000002", "Author Id does not exist. Author Id is: %s"),
 
+    TAG_ID_NOT_EXIST("000003", "Tag Id does not exist. Tag Id is: %s"),
     // Validation errors
     NEGATIVE_OR_NULL_NUMBER("000010", "%s can not be null or less than 1. %s is: %s"),
     NULL_STRING("000011", "%s can not be null. %s is null"),

@@ -1,7 +1,7 @@
 package com.mjc.school.service.implementation;
 
 import com.mjc.school.repository.BaseRepository;
-import com.mjc.school.repository.implementation.AuthorRepository;
+import com.mjc.school.repository.implementation.NewsRepository;
 import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.service.BaseService;
@@ -16,9 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-//import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -57,13 +57,10 @@ public class ImplementNewsService implements BaseService<NewsDtoRequest, NewsDto
      * Retrieves all news articles.
      * @return List of news DTOs
      */
-    //@Transactional(readOnly = true)
     @Override
     public List<NewsDtoResponse> readAll() {
         log.info("Service News Component -> Fetching all news articles");
-        System.out.println("Method readALL from class Implementation News Service");
         List<NewsModel> newsList = newsRepository.readAll();
-        //System.out.println("newsList -> " + newsList.get(0).getContent());
         log.debug("Service News Component -> Retrieved {} news articles from repository", newsList.size());
         return mapper.modelListToDtoListNews(newsList);
     }
@@ -124,5 +121,17 @@ public class ImplementNewsService implements BaseService<NewsDtoRequest, NewsDto
             throw new NotFoundException(String.format(ErrorCodes.NEW_ID_N_EXIST.toString(), id));
         }
     }
+
+    public List<NewsDtoResponse> readNewsByParameters(Map map) {
+        log.info("Service News Component -> Fetching news by parameters");
+        String tag = map.get("tag").toString().charAt(0) == '0' ? null : String.valueOf(map.get("tag"));
+        Long tagId = Long.parseLong((String)map.get("tag_id")) == 0 ? null : Long.parseLong((String) map.get("tag_id"));
+        String author = map.get("author_name").toString().charAt(0) == '0' ? null : String.valueOf(map.get("author_name"));
+        String title = map.get("title").toString().charAt(0) == '0' ? null : String.valueOf(map.get("title"));
+        String content = map.get("content").toString().charAt(0) == '0' ? null : String.valueOf(map.get("content"));
+        List<NewsModel> newsList = ((NewsRepository)newsRepository).findByCriteria(tag, tagId, author, title, content);
+        return mapper.modelListToDtoListNews(newsList);
+    }
+
 }
 

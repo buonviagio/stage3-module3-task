@@ -64,6 +64,27 @@ public class OperationReader {
             case GET_ALL_TAGS -> {
                 return new GetAllTagsCommand();
             }
+            case GET_TAG_BY_ID -> {
+                return readTagById(scanner,  operation);
+            }
+            case CREATE_TAG -> {
+                return createTag(scanner);
+            }
+            case UPDATE_TAG -> {
+                return updateTag(scanner);
+            }
+            case DELETE_TAG -> {
+                return deleteTagById(scanner, operation);
+            }
+            case GET_AUTHOR_BY_NEWS_ID -> {
+                return readAuthorByNewsId(scanner, operation);
+            }
+            case GET_TAGS_BY_NEWS_ID -> {
+                return readTagByNewsId(scanner, operation);
+            }
+            case GET_NEWS_BY_SOME_PARAMETERS -> {
+                return getNewsByParams(scanner, operation);
+            }
             case EXIT -> System.exit(0);
             default -> throw new CommandNotFoundException("Command not found");
         }
@@ -86,6 +107,23 @@ public class OperationReader {
         return new GetAuthorByIdCommand(Long.parseLong(id));
     }
 
+    private Command<Long>  readTagById(Scanner scanner, Operations operations) throws NotNumberException {
+        log.info("Reading parameters for GetTagByIdCommand");
+        System.out.println("Operation: " + operations.getCommand());
+        String id = readNumber(scanner, "author");
+        log.debug("Creating GetTagByIdCommand with ID: {}", id);
+        return new GetTagByIdCommand(Long.parseLong(id));
+    }
+
+    private Command<Long>  readTagByNewsId(Scanner scanner, Operations operations) throws NotNumberException {
+        log.info("Reading parameters for GetTagByNewsIdCommand");
+        System.out.println("Operation: " + operations.getCommand());
+        String id = readNumber(scanner, "news");
+        log.debug("Creating GetTagByNewsIdCommand with ID: {}", id);
+        return new GetTagByIdCommand(Long.parseLong(id));
+    }
+
+
     private Command<Long>  deleteNewsById(Scanner scanner, Operations operations) throws NotNumberException {
         log.info("Reading parameters for DeleteNewsByIdCommand");
         System.out.println("Operation: " + operations.getCommand());
@@ -100,6 +138,14 @@ public class OperationReader {
         String id = readNumber(scanner, "author");
         log.debug("Creating DeleteAuthorByIdCommand with ID: {}", id);
         return new DeleteAuthorByIdCommand(Long.parseLong(id));
+    }
+
+    private Command<Long>  deleteTagById(Scanner scanner, Operations operations) throws NotNumberException {
+        log.info("Reading parameters for DeleteTagByIdCommand");
+        System.out.println("Operation: " + operations.getCommand());
+        String id = readNumber(scanner, "tag");
+        log.debug("Creating DeleteTagByIdCommand with ID: {}", id);
+        return new DeleteTagByIdCommand(Long.parseLong(id));
     }
 
     private Command<?> createNews(Scanner scanner) throws NotNumberException {
@@ -118,6 +164,14 @@ public class OperationReader {
         String name = readString(scanner, "author", "name");
         log.debug("Creating CreateAuthorCommand with name: {}", name);
         return new CreateAuthorCommand(name);
+    }
+
+    private Command<?> createTag(Scanner scanner) {
+        log.info("Reading parameters for CreateTagCommand");
+        System.out.println("Operation: Create tag.");
+        String name = readString(scanner, "tag", "name");
+        log.debug("Creating CreateTagCommand with name: {}", name);
+        return new CreateTagCommand(name);
     }
 
     private Command<?> updateNews(Scanner scanner) throws NotNumberException {
@@ -141,6 +195,35 @@ public class OperationReader {
         return new UpdateAuthorCommand(authorId, name);
     }
 
+    private Command<?> updateTag(Scanner scanner) throws NotNumberException {
+        log.info("Reading parameters for UpdateTagCommand");
+        System.out.println("Operation: Update tag.");
+        Map<String, String> map = new HashMap<>();
+        Long tagId = Long.parseLong(readNumber(scanner, "tag"));
+        String name = readString(scanner, "tag", "name");
+        log.debug("Creating UpdateTagCommand for ID: {}", tagId);
+        return new UpdateTagCommand(tagId, name);
+    }
+
+    private Command<Long>  readAuthorByNewsId(Scanner scanner, Operations operations) throws NotNumberException {
+        log.info("Reading parameters for GetAuthorByNewsIdCommand");
+        System.out.println("Operation: " + operations.getCommand());
+        String id = readNumber(scanner, "news");
+        log.debug("Creating GetAuthorByNewsIdCommand with ID: {}", id);
+        return new GetAuthorByNewsIdCommand(Long.parseLong(id));
+    }
+
+    private Command<?>  getNewsByParams(Scanner scanner, Operations operations) throws NotNumberException {
+        Map<String, String> map = new HashMap<>();
+        log.info("Reading parameters for GetNewsByParamsCommand");
+        System.out.println("Operation: " + operations.getCommand() + " all parameters are optional, if you want to skipp one parameter type 0");
+        map.put("tag", readString(scanner, "tag", ""));
+        map.put("tag_id", readString(scanner, "tag", "id"));
+        map.put("author_name", readString(scanner, "author", "name"));
+        map.put("title", readString(scanner, "title", ""));
+        map.put("content", readString(scanner, "some",  "content"));
+        return new GetNewsByParametersCommand(map);
+    }
     /**
      * Reads a string input from the user with validation for empty values.
      *

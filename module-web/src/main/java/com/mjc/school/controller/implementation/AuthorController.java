@@ -7,6 +7,7 @@ import com.mjc.school.controller.annotations.CommandHandler;
 import com.mjc.school.controller.annotations.CommandParam;
 import com.mjc.school.service.dto.AuthorDtoRequest;
 import com.mjc.school.service.dto.AuthorDtoResponse;
+import com.mjc.school.service.implementation.ImplementAuthorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -103,6 +104,19 @@ public class AuthorController implements BaseController<AuthorDtoRequest, Author
         log.info("Controller author component -> Deleting author with ID: {}", id);
         boolean response = authorService.deleteById(id);
         System.out.println("Author was deleted: " + response);
+        return response;
+    }
+
+    /**
+     * Retrieves a specific author by news ID.
+     * @param id News identifier
+     * @return Author DTO response
+     */
+    @CommandHandler(operation = "Get author by news id")
+    public AuthorDtoResponse readAuthorByNewsId(@CommandParam("id") Long id) {
+        log.info("Controller author component -> Fetching author by news ID: {}", id);
+        AuthorDtoResponse response = ((ImplementAuthorService)authorService).readAuthorByNewsId(id);
+        System.out.println(printAuthor(response));
         return response;
     }
 

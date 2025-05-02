@@ -4,25 +4,31 @@ import com.mjc.school.repository.model.NewsModel;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.*;
 
-import javax.sql.DataSource;
-import java.util.List;
-
-/*@Aspect
+@Aspect
 @Component
 public class AspectDeleteNews {
-    DataSource dataSource = DataSource.getInstance();
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @AfterReturning(value = "@annotation(com.mjc.school.repository.annotations.DeleteNews) " +
             "&& args(id)", returning = "result")
     public void afterAuthorDelete(Long id, boolean result) {
         if (result) {
-            List<NewsModel> list = dataSource.getNews();
-            List<NewsModel> listResult = list
-                    .stream()
-                    .filter(c -> c.getAuthorId().equals(id))
-                    .toList();
-            list.removeAll(listResult);
+            System.out.println(" -> ASPECT IN ACTION ... ");
+            CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+
+            CriteriaDelete<NewsModel> delete = cb.createCriteriaDelete(NewsModel.class);
+
+            Root<NewsModel> root = delete.from(NewsModel.class);
+
+            delete.where(cb.equal(root.get("author").get("id"), id));
+
+            entityManager.createQuery(delete).executeUpdate();
         }
     }
-}*/
+}

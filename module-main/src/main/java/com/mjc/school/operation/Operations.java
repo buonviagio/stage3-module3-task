@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
         REMOVE_AUTHOR_BY_ID("Remove author by id", "10"),
         GET_ALL_TAGS("Get all tags", "11"),
         GET_TAG_BY_ID("Get Tag by id", "12"),
-        CREATE_TAG("Create_Tag", "13"),
+        CREATE_TAG("Create Tag", "13"),
         UPDATE_TAG("Update tag", "14"),
         DELETE_TAG("Remove tag by id", "15"),
         GET_AUTHOR_BY_NEWS_ID("Get author by news id", "16"),

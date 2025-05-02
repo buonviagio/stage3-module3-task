@@ -4,10 +4,7 @@ import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.repository.model.TagModel;
 import com.mjc.school.service.dto.*;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.Mappings;
+import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
@@ -118,7 +115,19 @@ public interface ModelMapper {
     AuthorModel dtoToModelAuthor(AuthorDtoRequest dtoRequest);
 
 
+    // Tag Mapper
     @Mapping(source = "name", target = "name")
     List<TagDtoResponse> modelListToDtoListTags(List<TagModel> tagsModelList);
+
+    TagDtoResponse modelToDtoTag(TagModel baseEntity);
+
+
+    @Mappings({
+            @Mapping(target = "createDate", ignore = true),
+            @Mapping(target = "lastUpdateDate", ignore = true)
+    })
+    TagModel dtoToModelTag(TagDtoRequest dtoRequest);
+
+    //TagDtoResponse modelToDtoTag(TagModel baseEntity);
 }
 
