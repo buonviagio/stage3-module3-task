@@ -1,7 +1,6 @@
 package com.mjc.school.repository.implementation;
 
 import com.mjc.school.repository.BaseRepository;
-import com.mjc.school.repository.annotations.DeleteNews;
 import com.mjc.school.repository.model.AuthorModel;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -9,11 +8,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import javax.transaction.Transactional;
-
-import com.mjc.school.repository.model.NewsModel;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -40,14 +35,12 @@ public class AuthorRepository implements BaseRepository<AuthorModel, Long> {
     }
 
     @Override
-    @Transactional
     public AuthorModel create(AuthorModel entity) {
-        entityManager.persist(entity);
+        entityManager.merge(entity);
         return entity;
     }
 
     @Override
-    @Transactional
     public AuthorModel update(AuthorModel entity) {
         AuthorModel existingAuthor = entityManager.find(AuthorModel.class, entity.getId());
         if (existingAuthor != null) {
@@ -58,7 +51,6 @@ public class AuthorRepository implements BaseRepository<AuthorModel, Long> {
     }
 
     //@DeleteNews we do not need it news will be deleted automatic
-    @Transactional
     @Override
     public boolean deleteById(Long id) {
         AuthorModel author = entityManager.find(AuthorModel.class, id);
@@ -69,13 +61,13 @@ public class AuthorRepository implements BaseRepository<AuthorModel, Long> {
         return false;
     }
 
-    @Transactional
+    //@Transactional
     @Override
     public boolean existById(Long id) {
         return entityManager.find(AuthorModel.class, id) != null;
     }
 
-    @Transactional
+    //@Transactional
     public Optional<AuthorModel> findAuthorByNewsId(Long id) {
             TypedQuery<AuthorModel> typedQuery = entityManager.createQuery(
                     "SELECT n.author FROM NewsModel n WHERE n.id like :id", AuthorModel.class);

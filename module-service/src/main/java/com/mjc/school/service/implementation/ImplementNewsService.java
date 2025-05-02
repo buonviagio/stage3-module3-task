@@ -65,6 +65,7 @@ public class ImplementNewsService implements BaseService<NewsDtoRequest, NewsDto
         return mapper.modelListToDtoListNews(newsList);
     }
 
+    @Transactional
     @Override
     public NewsDtoResponse readById(Long id) {
         log.info("Service News Component -> Fetching news article with ID: {}", id);

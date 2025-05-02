@@ -1,7 +1,6 @@
 package com.mjc.school.repository.implementation;
 
 import com.mjc.school.repository.BaseRepository;
-import com.mjc.school.repository.model.AuthorModel;
 import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.repository.model.TagModel;
 import javax.persistence.EntityManager;
@@ -11,10 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Root;
-import javax.transaction.Transactional;
-
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -38,20 +34,17 @@ public class TagRepository  implements BaseRepository<TagModel, Long> {
     }
 
     @Override
-    @Transactional
     public TagModel create(TagModel entity) {
         //entityManager.persist(entity);
         return entityManager.merge(entity);
     }
 
     @Override
-    @Transactional
     public TagModel update(TagModel entity) {
         return entityManager.merge(entity);
     }
 
     @Override
-    @Transactional
     public boolean deleteById(Long id) {
         TagModel tag = entityManager.find(TagModel.class, id);
         if (tag != null) {
@@ -66,7 +59,6 @@ public class TagRepository  implements BaseRepository<TagModel, Long> {
         return entityManager.find(TagModel.class, id) != null;
     }
 
-    @Transactional
     public List<TagModel> findTagByNewsId(Long id) {
         TypedQuery<TagModel> typedQuery = entityManager.createQuery(
                 "SELECT t FROM NewsModel n JOIN n.tags t WHERE n.id = :id", TagModel.class);

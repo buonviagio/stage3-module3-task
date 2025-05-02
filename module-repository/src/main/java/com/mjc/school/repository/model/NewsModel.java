@@ -2,9 +2,9 @@ package com.mjc.school.repository.model;
 
 import javax.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +12,7 @@ import java.util.Set;
 @Entity
 @Table(name = "news")
 @Data
+@EntityListeners(AuditingEntityListener.class)
 public class NewsModel implements BaseEntity<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +24,11 @@ public class NewsModel implements BaseEntity<Long> {
     @Column(name = "content", nullable = false, length = 255)
     private String content;
 
-    @CreationTimestamp
+    @CreatedDate
     @Column(name = "create_date", nullable = false, updatable = false)
     private LocalDateTime createDate;
 
-    @UpdateTimestamp
+    @LastModifiedDate
     @Column(name = "last_update_date", nullable = false)
     private LocalDateTime lastUpdateDate;
 

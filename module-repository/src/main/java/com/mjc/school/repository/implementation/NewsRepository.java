@@ -6,12 +6,9 @@ import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.repository.model.TagModel;
 import javax.persistence.*;
 import javax.persistence.criteria.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import javax.persistence.criteria.CriteriaBuilder;
-import javax.transaction.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -29,7 +26,6 @@ public class NewsRepository implements BaseRepository<NewsModel, Long> {
         this.authorRepository = authorRepository;
     }
 
-    @Transactional
     @Override
     public List<NewsModel> readAll() {
         System.out.println("Method readAll() from NEWS REPOSITORY CLASS");
@@ -38,7 +34,6 @@ public class NewsRepository implements BaseRepository<NewsModel, Long> {
         return result;
     }
 
-    //@Transactional
     @Override
     public Optional<NewsModel> readById(Long id) {
         System.out.println("ID -> " + id);

@@ -63,6 +63,7 @@ public class ImplementTagService implements BaseService<TagDtoRequest, TagDtoRes
 
     @Validate
     @Override
+    @Transactional
     public TagDtoResponse create(TagDtoRequest createRequest) {
         log.info("Service Tag Component -> Creating new tag with request: {}", createRequest);
         TagModel tagModel = mapper.dtoToModelTag(createRequest);
@@ -72,6 +73,7 @@ public class ImplementTagService implements BaseService<TagDtoRequest, TagDtoRes
 
     @Validate
     @Override
+    @Transactional
     public TagDtoResponse update(TagDtoRequest updateRequest) {
         log.info("Service Tag Component -> Updating tag with ID: {}", updateRequest.getId());
         if (tagRepository.existById(updateRequest.getId())) {
@@ -83,6 +85,7 @@ public class ImplementTagService implements BaseService<TagDtoRequest, TagDtoRes
         }
     }
 
+    @Transactional
     @Override
     public boolean deleteById(Long id) {
         log.info("Service Tag Component -> Deleting tag with ID: {}", id);
@@ -92,7 +95,8 @@ public class ImplementTagService implements BaseService<TagDtoRequest, TagDtoRes
             throw new NotFoundException(String.format(ErrorCodes.TAG_ID_NOT_EXIST.toString(), id));
         }
     }
-    
+
+    @Transactional
     public List<TagDtoResponse> readTagByNewsId(Long id) {
         log.info("Service Tag Component -> Fetching tag by news ID: {}", id);
         List<TagModel> tagModels = ((TagRepository) tagRepository).findTagByNewsId(id);

@@ -9,6 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import javax.security.auth.login.AccountLockedException;
 
@@ -36,6 +37,7 @@ import javax.security.auth.login.AccountLockedException;
 @Slf4j
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableJpaAuditing
 public class Main implements CommandLineRunner {
 
     @Autowired

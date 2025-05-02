@@ -1,4 +1,4 @@
-˜22:32:02.361 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
-˜22:32:02.405 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
+˜22:39:46.660 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
+˜22:39:46.716 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Updating news article with ID: 1
 ZAUTHOR AuthorModel(id=1, name=Test Author, createDate=null, lastUpdateDate=null, news=[])
-¤22:32:02.415 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Creating new news article. Title: Test Title
+¤22:39:46.722 [Test worker] INFO com.mjc.school.service.implementation.ImplementNewsService - Service News Component -> Creating new news article. Title: Test Title

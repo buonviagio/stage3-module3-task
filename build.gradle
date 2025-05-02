@@ -49,7 +49,7 @@ subprojects {
 
         testImplementation "org.junit.jupiter:junit-jupiter-api"
         testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
-        testImplementation "com.tngtech.archunit:archunit-junit5:$archUnitVersion"
+        testImplementation "com.tngtech.archunit:archunit-junit5:1.0.0"
         testImplementation "org.springframework.boot:spring-boot-starter-test" // Includes Spring Test
 
         // MapStruct

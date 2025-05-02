@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -69,6 +70,7 @@ public class ImplementAuthorService implements BaseService<AuthorDtoRequest, Aut
 
     @Validate
     @Override
+    @Transactional
     public AuthorDtoResponse create(AuthorDtoRequest createRequest) {
         log.info("Service Author Component -> Creating new author with request: {}", createRequest);
         AuthorModel authorModel = mapper.dtoToModelAuthor(createRequest);
@@ -78,6 +80,7 @@ public class ImplementAuthorService implements BaseService<AuthorDtoRequest, Aut
 
     @Validate
     @Override
+    @Transactional
     public AuthorDtoResponse update(AuthorDtoRequest updateRequest) {
         log.info("Service Author Component -> Updating author with ID: {}", updateRequest.getId());
         if (repository.existById(updateRequest.getId())) {
@@ -88,7 +91,7 @@ public class ImplementAuthorService implements BaseService<AuthorDtoRequest, Aut
             throw new NotFoundException(String.format(ErrorCodes.AUTH_ID_NOT_EXIST.toString(), updateRequest.getId()));
         }
     }
-
+    @Transactional
     @Override
     public boolean deleteById(Long id) {
         log.info("Service Author Component -> Deleting author with ID: {}", id);
@@ -99,6 +102,7 @@ public class ImplementAuthorService implements BaseService<AuthorDtoRequest, Aut
         }
     }
 
+    @Transactional
     public AuthorDtoResponse readAuthorByNewsId(Long id) {
         log.info("Service Author Component -> Fetching author by news ID: {}", id);
         Optional<AuthorModel> optional = ((AuthorRepository) repository).findAuthorByNewsId(id);
